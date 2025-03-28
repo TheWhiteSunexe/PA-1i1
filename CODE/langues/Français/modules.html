@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <title>Guepstar Formation</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device, initial-scale">
+        <meta name="description" content="Site permettant de se former sur l'informatique">
+        <link rel="stylesheet" type="text/css" href="Pages/css/style.css">
+    </head>
+
+    <body>
+        
+        <header>
+            <section class="section-container-accueil">
+                <section class="text-section-accueil"> <!--retirer le -1 car sinon ça bug ? étrangement...-->
+                <h1>GuepStar Formation</h1>
+                </section>
+                <section class="text-section-accueil-2">
+                    <nav class="nav1">
+                        <ul>
+                            <li><a href="../Français/accueil.html">Accueil</a></li>
+                            <li><a href="../Français/equipe.html">Notre équipe</a></li>
+                            <li><a href="../Français/modules.html">Modules d'apprentissage</a></li>
+                            <li><a href="../Français/contact.html">Contact</a></li>
+                            <li><a href="../Français/paramètres.php">Paramètres</a></li>
+                        </ul>
+                    </nav>
+                </section>
+                <section class="text-section-accueil-3">
+                    <nav class="nav2">
+                        <ul>
+                            <li><a href="Pages/connexion/login antichambre.html">Login</a></li>
+                        </ul>
+                    </nav>
+                </section>
+            </section>
+
+            
+            
+            
+        </header>
+
+        <main>
+            <section class="bannermodules"> </section>
+            <button onclick="ajouterSection()">Ajouter une section</button>
+<!--location.href = '../Français/nouvelle_section.html'; -->
+
+
+<!-- DONC ON POURRAIT METTRE TOUTES LES FONCTIONS DANS UNE PAGE JS POUR QU'ELLES NE FASSENT PAS PARTI DE CETTE PAGE-->
+           
+
+            <script>
+                function ajouterSection() {
+                    // Créer une nouvelle section
+                    var nouvelleSection = document.createElement("section");
+                    nouvelleSection.innerHTML = "<h2>Abandon du nouveau cours</h2><p>Veuillez recharger la page.</p>";
+                    
+                    // Ajouter la section au corps de la page
+                    document.body.appendChild(nouvelleSection);
+                    
+                    // Rediriger vers la nouvelle page
+                    window.location.href = "nouvelle_section.html";
+                }
+            </script>
+
+            <button onclick="ajoutercours()">Ajouter un cours</button>
+
+            <script>
+                function ajoutercours() {
+                    // Créer un nouveau cours (IDEE N1)
+                    var nouveaucours = document.createElement("cours");
+                    nouveaucours.innerHTML = "<h2>Abandon du nouveau cours</h2><p>Veuillez recharger la page.</p>";
+                    
+                    // Ajouter le cours au corps de la page
+                    document.body.appendChild(nouveaucours);
+                    
+                    // Rediriger vers la nouvelle page
+                    window.location.href = "nouveau_cours.html";
+                }
+            </script>
+<!--
+            <button onclick="supprimerContenu()">Supprimer le contenu</button>
+
+            <script>
+                function supprimerContenu() {
+                    // Demander une confirmation à l'utilisateur
+                    if (confirm("Êtes-vous sûr de vouloir supprimer le contenu ?")) {
+                        // Soumettre le formulaire pour supprimer le contenu définitivement
+                        document.getElementById("form_suppression").submit();
+                    }
+                }
+            </script>
+        -->
+ </html>      
+  
+ <button id="bouttonsupp">Supprimer le contenu</button>
+<script>
+    document.getElementById("bouttonsupp").onclick = function supprimerContenu() {
+        // Définir les données à envoyer
+        var formData = new FormData();
+        formData.append('valeurasupp', '000'); // Ajouter la valeur à transmettre
+
+        // Configurer la requête Fetch
+        var fetchOptions = {
+            method: 'POST',
+            body: formData
+        };
+
+        // Envoyer la requête Fetch
+        fetch('Pages/connexion/verification.php', fetchOptions)
+            .then(response => {
+                // Traiter la réponse si nécessaire
+                console.log('Contenu supprimé avec succès !');
+            })
+            .catch(error => {
+                // Gérer les erreurs
+                console.error('Une erreur s\'est produite :', error);
+            });
+    }
+</script>
+
+
+
+
+
+
+        
+    
+        
+    
+    
+    <form id="5733" action="Pages/connexion/verification.php" method="post">
+    <section class="section-container">
+
+                <section class="text-section">
+                    <h3>vkdemlz</h3>
+                    <p>gkrel</p>
+                </section> 
+                <button id="5733">Supprimer le contenu</button>
+                <script>
+                document.getElementById("5733").onclick = function supprimerContenu() {
+                // Définir les données à envoyer
+                var formData = new FormData();
+                formData.append('valeurasupp', 5733); // Ajouter la valeur à transmettre
+
+                // Configurer la requête Fetch
+                var fetchOptions = {
+                    method: 'POST',
+                    body: formData
+                };
+
+                // Envoyer la requête Fetch
+                fetch('Pages/connexion/verification.php', fetchOptions)
+                    .then(response => {
+                        // Traiter la réponse si nécessaire
+                        console.log('Contenu supprimé avec succès !');
+                    })
+                    .catch(error => {
+                        // Gérer les erreurs
+                        console.error('Une erreur s\'est produite :', error);
+                    });
+            }
+            </script>                
+        </section>
+    </form>
+    
+            <form id="6063" action="Pages/connexion/verification.php" method="post">
+                
+                <section class="section-container">
+        
+                    <section class="text-section">
+                        <h3>gefnkzpeo</h3>
+                        <p>,gezpo</p>
+                    </section>
+        
+                    <section class="text-section">
+                        <video controls width="500">
+                            <source src="16 fb.png" type="video/mp4">
+                        </video>
+                    </section>
+        
+                    <button id="6063">Supprimer le contenu</button>
+                <script>
+                document.getElementById("6063").onclick = function supprimerContenu() {
+                // Définir les données à envoyer
+                var formData = new FormData();
+                formData.append('valeurasupp', 6063); // Ajouter la valeur à transmettre
+
+                // Configurer la requête Fetch
+                var fetchOptions = {
+                    method: 'POST',
+                    body: formData
+                };
+
+                // Envoyer la requête Fetch
+                fetch('Pages/connexion/verification.php', fetchOptions)
+                    .then(response => {
+                        // Traiter la réponse si nécessaire
+                        console.log('Contenu supprimé avec succès !');
+                    })
+                    .catch(error => {
+                        // Gérer les erreurs
+                        console.error('Une erreur s\'est produite :', error);
+                    });
+            }
+            </script> 
+        
+                </section>
+            </form>
+        

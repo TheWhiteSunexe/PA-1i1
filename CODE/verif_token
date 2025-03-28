@@ -1,0 +1,44 @@
+<?php
+
+// Connexion à la base de données
+try {
+    $bdd = new PDO('mysql:host=localhost:3306;dbname=pa', 'root', 'root', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+} catch (Exception $e) {
+    die('Erreur : ' . $e->getMessage());
+}
+
+// Vérification de la présence du token dans l'URL
+if (isset($_GET['token']) && !empty($_GET['token'])) {
+    $token = $_GET['token'];
+
+    // Recherche du token dans la base de données
+    $q = 'SELECT id_users, expiration FROM tokens WHERE code = :code';
+    $req = $bdd->prepare($q);
+    $req->execute(['code' => $token]);
+
+    $result = $req->fetch();
+
+    // Si le token existe et n'est pas expiré
+    if ($result && $result['expiration'] >= time()) {
+        // Mise à jour du statut de vérification de l'utilisateur
+        $q = 'UPDATE users SET verif = 1 WHERE id = :id';
+        $req = $bdd->prepare($q);
+        $req->execute(['id' => $result['id_users']]);
+
+        // Suppression du token utilisé
+        $q = 'DELETE FROM tokens WHERE code = :code';
+        $req = $bdd->prepare($q);
+        $req->execute(['code' => $token]);
+
+        // Redirection vers une page de succès
+        header('location:inscription.php?message=Votre compte a été vérifié avec succès.');
+    } else {
+        // Token invalide ou expiré
+        header('location:inscription.php?message=Token invalide ou expiré.');
+    }
+} else {
+    // Token non fourni
+    header('location:inscription.php?message=Aucun token fourni.');
+}
+exit;
+?>
