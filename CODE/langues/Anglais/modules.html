@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+
+<html>
+
+    <head>
+        <title>Guepstar Formation</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Site permettant de se former sur l'informatique">
+        <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    </head>
+
+    <body>
+        
+        <header>
+            <section class="section-container-accueil">
+                <section class="text-section-accueil"> <!--retirer le -1 car sinon ça bug ? étrangement...-->
+                <h1>GuepStar Formation</h1>
+                </section>
+                <section class="text-section-accueil-2">
+                    <nav class="nav1">
+                        <ul>
+                            <li><a href="../Anglais/accueil.html">home</a></li>
+                            <li><a href="../Anglais/equipe.html">Our team</a></li>
+                            <li><a href="../Anglais/modules.html">Learning Modules</a></li>
+                            <li><a href="../Anglais/contact.html">Contact</a></li>
+                            <li><a href="../Anglais/paramètres.php">Settings</a></li>
+                        </ul>
+                    </nav>
+                </section>
+                <section class="text-section-accueil-3">
+                    <nav class="nav2">
+                        <ul>
+                            <li><a href="../../../Pages/connexion/login antichambre.html">Login</a></li>
+                        </ul>
+                    </nav>
+                </section>
+            </section>
+
+            
+            
+            
+        </header>
+
+        <main>
+            <p>Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications</p>
+
+            <button onclick="ajouterSection()">Add a section</button>
+
+            <script>
+                function ajouterSection() {
+                    // Créer une nouvelle section
+                    var nouvelleSection = document.createElement("section");
+                    nouvelleSection.innerHTML = "<h2>Nouvelle section</h2><p>Ceci est un contenu par défaut.</p>";
+                    
+                    // Ajouter la nouvelle section au corps de la page
+                    document.body.appendChild(nouvelleSection);
+                    
+                    // Rediriger vers la nouvelle page
+                    window.location.href = "nouvelle_section.html";
+                }
+            </script>
+
+            <button onclick="ajoutercours()">Add a course</button>
+
+            <script>
+                function ajoutercours() {
+                    // Créer une nouvelle section
+                    var nouveaucours = document.createElement("cours");
+                    nouveaucours.innerHTML = "<h2>Nouveau cours</h2><p>Ceci est un contenu par défaut.</p>";
+                    
+                    // Ajouter la nouvelle section au corps de la page
+                    document.body.appendChild(nouveaucours);
+                    
+                    // Rediriger vers la nouvelle page
+                    window.location.href = "nouveau_cours.html";
+                }
+            </script>
+
+            <button onclick="supprimerContenu()">Delete content</button>
+
+            <script>
+                function supprimerContenu() {
+                    // Demander une confirmation à l'utilisateur
+                    if (confirm("Êtes-vous sûr de vouloir supprimer le contenu ?")) {
+                        // Soumettre le formulaire pour supprimer le contenu définitivement
+                        document.getElementById("form_suppression").submit();
+                    }
+                }
+            </script>
+            <form id="form_suppression" action="verification.php" method="post">
+                <!-- mettre ici le code que l'on veut supprimer -->
+            </form>
+
+            <!-- Élément dont le contenu sera supprimé -->
+
+            <!-- NE PEUX PAS ETRE UTILISER CAR JAVASCRIPT EST UN LANGAGE COTE CLIENT DONC NON DEFINITIF
+            <script>
+            function supprimerContenu() {
+                // Vérifier si la case à cocher est cochée
+                if(document.getElementById('checkbox').checked) {
+                    // Supprimer le contenu de l'élément
+                    document.getElementById('contenu').innerHTML = '';
+                }
+            }
+            </script>
+            -->
+            <!--
+                Bouton pour ajouter une section 
+                <button id="ajouterSection">Ajouter une section</button>
+
+                Contenu par défaut 
+                <section id="contenuParDefaut">
+                    <h2>Contenu par défaut</h2>
+                    <p>Ceci est le contenu initial de la page.</p>
+                </section>
+
+                <script>
+                document.getElementById("ajouterSection").addEventListener("click", function() {
+                    // Créer une nouvelle section
+                    var nouvelleSection = document.createElement("section");
+                    nouvelleSection.innerHTML = "<h2>Nouvelle section ajoutée</h2><p>Cette section a été ajoutée dynamiquement.</p>";
+                    
+                    // Ajouter la nouvelle section au corps du document
+                    document.body.appendChild(nouvelleSection);
+                    
+                    // Rediriger vers une nouvelle page
+                    window.location.href = "nouvelle_page.html";
+                });
+                </script>
+            -->
+        </main>
+    </body>
+
+</html>
+
+    <form id="" action="verification.php" method="post">
+    <section class="section-container">
+
+        <section class="text-section">
+            <h3>Cours HTML,CSS,JS,PHP</h3>
+            <p>apprentissage des bases du dev web</p>
+        </section>                     
+    </section>
+    </form>
+    
+    <form id="" action="verification.php" method="post">
+    
+    <section class="section-container">
+
+        <section class="text-section">
+            <h3>Cours 1</h3>
+            <p>cours sur les bases du html</p>
+        </section>
+
+        <section class="text-section">
+            <video controls width="500">
+                <source src="opening2019.jpg" type="video/mp4">
+            </video>
+        </section>
+                        
+    </section>
+    </form>
+    
+    <form id="" action="verification.php" method="post">
+    <section class="section-container">
+
+        <section class="text-section">
+            <h3>Cours langage C</h3>
+            <p>apprentissage des bases du C</p>
+        </section>                     
+    </section>
+    </form>
+    

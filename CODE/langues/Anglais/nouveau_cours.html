@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+
+<html>
+
+    <head>
+        <title>Guepstar Formation</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Site permettant de se former sur l'informatique">
+        <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    </head>
+
+    <body>
+        
+        <header>
+            <section class="section-container-accueil">
+                <section class="text-section-accueil"> <!--retirer le -1 car sinon ça bug ? étrangement...-->
+                <h1>GuepStar Formation</h1>
+                </section>
+                <section class="text-section-accueil-2">
+                    <nav class="nav1">
+                        <ul>
+                            <li><a href="../Anglais/accueil.html">home</a></li>
+                            <li><a href="../Anglais/equipe.html">Our team</a></li>
+                            <li><a href="../Anglais/modules.html">Learning Modules</a></li>
+                            <li><a href="../Anglais/contact.html">Contact</a></li>
+                            <li><a href="../Anglais/paramètres.php">Settings</a></li>
+                        </ul>
+                    </nav>
+                </section>
+                <section class="text-section-accueil-3">
+                    <nav class="nav2">
+                        <ul>
+                            <li><a href="../../../Pages/connexion/login antichambre.html">Login</a></li>
+                        </ul>
+                    </nav>
+                </section>
+            </section>
+
+            
+            
+            
+        </header>
+        
+            
+            
+        <main>
+            <section class="section-container">
+                <form action="../../connexion/verification.php" method="post">
+
+                    <section class="image-section">
+
+                        <div class="title">                    
+                            <input type="text" name="title-cours" placeholder="Title" required>
+                            <i class='bx bxs-user'></i>
+                        </div>
+
+                        <div class="description">
+                            <input type="text" name="description-cours" placeholder="Course Description" required>
+                            <i class='bx bxs-lock-alt' ></i>
+                        </div>
+
+                    </section>
+
+                    <section class="text-section">
+
+                        <div class="vidéo">     
+                            <label for="vidéo">Choisissez un cours à poster :</label>               
+                            <input type="file" name="video" placeholder="choose your video:" required>
+                            <i class='bx bxs-user'></i>
+                        </div>
+
+                        <div>
+                            <input type="submit" class="submit-button" value="Send !">
+                        </div>
+
+                    </section>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <section class="bannerfooter">
+                <span><small> 2023 GuepStar Formation - The White Sun - Tous droits réservés.</small> </span>
+            </section>
+
+        </footer>
+    </body>
+
+</html>
